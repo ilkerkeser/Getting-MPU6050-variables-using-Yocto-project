@@ -1,0 +1,18 @@
+/dts-v1/;
+/plugin/;
+
+/ {
+    compatible = "ti,beaglebone", "ti,beaglebone-black";
+
+    part-number = "ENABLE-I2C2";
+    version = "00A0";
+
+    fragment@0 {
+        target = <&i2c2>;
+        __overlay__ {
+            status = "okay";
+            pinctrl-names = "default";
+            pinctrl-0 = <&i2c2_pins>;
+        };
+    };
+};
